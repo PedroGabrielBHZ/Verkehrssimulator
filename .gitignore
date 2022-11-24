@@ -1,0 +1,8 @@
+# ignore vscode stuff
+.vscode/
+
+# ignore github stuff
+.github/
+
+# ignore build files
+build/
