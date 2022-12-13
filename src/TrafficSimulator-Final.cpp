@@ -6,6 +6,7 @@
 #include "Street.h"
 #include "Intersection.h"
 #include "Graphics.h"
+#include "TrafficLight.h"
 
 
 // Paris
@@ -13,8 +14,8 @@ void createTrafficObjects_Paris(std::vector<std::shared_ptr<Street>> &streets, s
 {
     // assign filename of corresponding city map
     // Note: You can use the webp format instead of jpeg
-    // According to Google - WebP lossless images are 26% smaller in size compared to PNGs. 
-    // WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index. 
+    // According to Google - WebP lossless images are 26% smaller in size compared to PNGs.
+    // WebP lossy images are 25-34% smaller than comparable JPEG images at equivalent SSIM quality index.
     filename = "../data/paris.jpg";
 
     // init traffic objects
@@ -123,7 +124,8 @@ int main()
     std::vector<std::shared_ptr<Vehicle>> vehicles;
     std::string backgroundImg;
     int nVehicles = 6;
-    createTrafficObjects_Paris(streets, intersections, vehicles, backgroundImg, nVehicles);
+    // createTrafficObjects_Paris(streets, intersections, vehicles, backgroundImg, nVehicles);
+    createTrafficObjects_NYC(streets, intersections, vehicles, backgroundImg, nVehicles);
 
     /* PART 2 : simulate traffic objects */
 
